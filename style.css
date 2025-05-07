@@ -1,0 +1,139 @@
+html, body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Use border-box model for consistent sizing */
+    font-size: 16px; /* Set base font size */
+    font-weight: 400; /* Normal weight for body text */
+    line-height: 1.5; /* Set line height for better readability */
+    background-color: white; /* Light grey background for the body */
+    color: #333; /* Dark grey text color */
+    font-family: Arial, sans-serif; /* Use a sans-serif font for better readability */
+    height: 100%; /* Ensure the body takes up the full height of the viewport */
+}
+
+/* General Page Styling */
+body {
+    display: flex;
+    flex-direction: column; /* Use flexbox to structure the layout */
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 0.4em;
+    background-color: #57068c; /* NYU Violet background */
+    color: white;
+}
+
+main {
+    text-align: justify; /* Justify text for better readability */
+    flex: 1; /* Allow the main content to grow and take up available space */
+}
+
+
+/* Profile Section */
+.profile {
+    display: flex;
+    justify-content: center; /* Center the profile section */
+    align-items: center; /* Center vertically */
+    margin: 1em 0; /* Add margin for spacing */
+    flex-direction: row; /* Align items in a row */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+}
+.profile-image {
+    border-radius: 50%; /* Make the image circular */
+    width: 150px; /* Set a fixed width for the image */
+    height: 150px; /* Set a fixed height for the image */
+    margin-right: 1em; /* Add space between the image and text */
+}
+.profile-title-text {
+    margin: 0.5em 0;
+    padding: 0 1em; /* Add padding to paragraphs for better spacing */
+    font-size: 1.1em; /* Slightly larger font size for better readability */
+    text-align: justify; /* Align text to the left */
+}
+.profile-text {
+    margin: 0 1em; /* Add margin for spacing */
+    padding: 0 0.6em; /* Add padding to paragraphs for better spacing */
+    font-size: 1em; /* Slightly larger font size for better readability */
+    text-align: justify; /* Justify text for better readability */
+}
+
+/* Contact Section */
+.contact {
+    display: flex;
+    text-align: center; /* Center the contact section */
+    justify-content: center; /* Center the contact links */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Align items in a column */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    background-color: #f2eefa; /* Light purple background */
+    margin: 0 4em; /* Center the contact section */
+    padding: 1em; /* Add padding for spacing */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 2px 3px 9px #eee5ff; /* Shadow effect */
+}
+.contact-links {
+    display: flex;
+    flex-direction: row; /* Align items in a row */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    justify-content: center; /* Center the contact links */
+}
+.contact-link {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    text-decoration: none; /* Remove underline from links */
+    justify-content: center; /* Center the contact links */
+    align-items: center; /* Center vertically */
+    color: #57068c; /* Black text color */
+    background-color: #eee5ff; /* Light purple background */
+    margin: 0.5em; /* Add margin for spacing */
+    padding: 0.2em 0.6em; /* Add padding for better spacing */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+.contact-link:hover {
+    background-color: #eeccff; /* Darker shade on hover */
+    box-shadow: 0 0 5px #8e44ad; /* Shadow effect on hover */
+    transform: translateY(-2px); /* Slightly move up on hover */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+.contact-link:active {
+    background-color: #eeccff; /* Darker shade on click */
+    box-shadow: 0 0 5px #8e44ad; /* Shadow effect on click */
+    transform: translateY(1px); /* Slightly move down on click */
+    transition: transform 0.1s ease; /* Smooth transition for click effect */
+}
+.contact-link:focus {
+    background-color: #eee5ff; /* Light purple background on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px #8e44ad;
+    transform: translateY(1px); /* Slightly move down on focus */
+    transition: transform 0.1s ease; /* Smooth transition for click effect */
+}
+.contact-link:visited {
+    color: #300051; /* Change color for visited links */
+}
+.contact-icons {
+    height: 23px; /* Set a fixed height for the icons */
+    margin-right: 0.23em; /* Add space between the icon and text */
+}
+
+
+/* Footer Styling */
+footer {
+    position: fixed; /* Fix the footer to the bottom of the page */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0.1em;
+    font-size: 0.9em;
+    background-color: #333;
+    color: white;
+}
