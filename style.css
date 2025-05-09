@@ -2,9 +2,9 @@ html, body {
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
     box-sizing: border-box; /* Use border-box model for consistent sizing */
-    font-size: 16px; /* Set base font size */
+    font-size: 18px; /* Set base font size */
     font-weight: 400; /* Normal weight for body text */
-    line-height: 1.5; /* Set line height for better readability */
+    line-height: 1.75; /* Set line height for better readability */
     background-color: white; /* Light grey background for the body */
     color: #333; /* Dark grey text color */
     font-family: Arial, sans-serif; /* Use a sans-serif font for better readability */
@@ -30,13 +30,13 @@ header {
 }
 
 main {
-    text-align: justify; /* Justify text for better readability */
+    text-align: left; /* Align text to the left */
     flex: 1; /* Allow the main content to grow and take up available space */
 }
 
 
-/* Profile Section */
-.profile {
+/* Bio Section */
+.bio {
     display: flex;
     justify-content: center; /* Center the profile section */
     align-items: center; /* Center vertically */
@@ -50,17 +50,43 @@ main {
     height: 150px; /* Set a fixed height for the image */
     margin-right: 1em; /* Add space between the image and text */
 }
-.profile-title-text {
+.profile-text {
     margin: 0.5em 0;
     padding: 0 1em; /* Add padding to paragraphs for better spacing */
     font-size: 1.1em; /* Slightly larger font size for better readability */
-    text-align: justify; /* Align text to the left */
+    text-align: left; /* Align text to the left */
 }
-.profile-text {
+.bio-text {
     margin: 0 1em; /* Add margin for spacing */
     padding: 0 0.6em; /* Add padding to paragraphs for better spacing */
-    font-size: 1em; /* Slightly larger font size for better readability */
-    text-align: justify; /* Justify text for better readability */
+    text-align: left; /* Align text to the left */
+}
+.bio-link {
+    text-decoration: none; /* Remove underline from links */
+    color: #57068c; /* NYU Violet color */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+.bio-link:hover {
+    color: #300051; /* Darker shade on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+.bio-link:active {
+    color: #300051; /* Darker shade on click */
+    text-decoration: underline; /* Underline on click */
+}
+.bio-link:focus {
+    color: #300051; /* Darker shade on focus */
+    text-decoration: underline; /* Underline on focus */
+}
+.bio-link:visited {
+    color: #300051; /* Change color for visited links */
+}
+.bio-icon {
+    height: 18px; /* Set a fixed height for the icons */
+    margin-left: 0.2em; /* Add space between the icon and text */
+    margin-right: 0.2em; /* Add space between the icon and text */
+    margin-bottom: -0.1em; /* Adjust bottom margin for better alignment */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
 
@@ -101,7 +127,7 @@ main {
     color: #57068c; /* Black text color */
     background-color: #eee5ff; /* Light purple background */
     margin: 0.5em; /* Add margin for spacing */
-    padding: 0.2em 0.6em; /* Add padding for better spacing */
+    padding: 0.1em 0.6em; /* Add padding for better spacing */
     border-radius: 5px; /* Rounded corners */
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
@@ -128,7 +154,7 @@ main {
     color: #300051; /* Change color for visited links */
 }
 .contact-icons {
-    height: 23px; /* Set a fixed height for the icons */
+    height: 18px; /* Set a fixed height for the icons */
     margin-right: 0.23em; /* Add space between the icon and text */
 }
 
