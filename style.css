@@ -15,6 +15,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column; /* Use flexbox to structure the layout */
+    height: 100dvh; /* Ensure the page takes up the full viewport height */
 }
 
 h1, h2, h3 {
@@ -35,8 +36,8 @@ main {
 }
 
 
-/* Bio Section */
-.bio {
+/* Profile */
+.profile {
     display: flex;
     justify-content: center; /* Center the profile section */
     align-items: center; /* Center vertically */
@@ -56,10 +57,16 @@ main {
     font-size: 1.1em; /* Slightly larger font size for better readability */
     text-align: left; /* Align text to the left */
 }
-.bio-text {
-    margin: 0 1em; /* Add margin for spacing */
-    padding: 0 0.6em; /* Add padding to paragraphs for better spacing */
+
+/* Bio */
+.bio {
+    display: flex;
+    justify-content: center; /* Center the profile section */
+    align-items: center; /* Center vertically */
     text-align: left; /* Align text to the left */
+    padding: 0 1.6em; /* Add padding to paragraphs for better spacing */
+    flex-direction: column; /* Align items in a column */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
 }
 .bio-link {
     text-decoration: none; /* Remove underline from links */
@@ -89,14 +96,6 @@ main {
 }
 
 
-.hypercube-img {
-    width: 150px; /* Set a fixed width for the image */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0 auto; /* Center the image */
-    display: block; /* Make the image a block element */
-}
-
-
 /* Contact Section */
 .contact {
     display: flex;
@@ -106,14 +105,22 @@ main {
     flex-direction: column; /* Align items in a column */
     flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
     background-color: #f2eefa; /* Light purple background */
-    margin: 0 4em; /* Center the contact section */
+    margin: 4em auto; /* Center the contact section */
     padding: 1em; /* Add padding for spacing */
+    width: 80dvw; /* Set a fixed width for the contact section */
+    max-width: 800px; /* Set a maximum width for larger screens */
     border-radius: 5px; /* Rounded corners */
     box-shadow: 2px 3px 9px #eee5ff; /* Shadow effect */
 }
 .contact-header {
     margin-top: 0em; /* Remove space above the header */
     margin-bottom: 0.5em; /* Add space below the header */
+}
+.hypercube-img {
+    width: 150px; /* Set a fixed width for the image */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image */
+    display: block; /* Make the image a block element */
 }
 .contact-links {
     display: flex;
