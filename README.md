@@ -2,4 +2,4 @@
 
 My personal site
 
-https://Li-R-Y.github.io
+https://Li-R-Y.com
