@@ -2,12 +2,12 @@ html, body {
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
     box-sizing: border-box; /* Use border-box model for consistent sizing */
+    font-family: 'Open Sans', sans-serif; /* Use a sans-serif font for better readability */
     font-size: 18px; /* Set base font size */
     font-weight: 400; /* Normal weight for body text */
     line-height: 1.75; /* Set line height for better readability */
     background-color: white; /* Light grey background for the body */
     color: #333; /* Dark grey text color */
-    font-family: Arial, sans-serif; /* Use a sans-serif font for better readability */
     height: 100%; /* Ensure the body takes up the full height of the viewport */
 }
 
