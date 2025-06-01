@@ -61,7 +61,7 @@ main {
 /* Bio */
 .bio {
     display: flex;
-    justify-content: center; /* Center the profile section */
+    justify-content: center; /* Center the bio section */
     align-items: center; /* Center vertically */
     text-align: left; /* Align text to the left */
     padding: 0 1.6em; /* Add padding to paragraphs for better spacing */
