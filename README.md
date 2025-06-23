@@ -11,5 +11,3 @@ https://Li-R.com
 https://Li-Ruoyu.com
 
 https://Ruoyu-Li.com
-
-https://StarrrryL.com
