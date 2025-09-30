@@ -113,25 +113,29 @@ main {
     flex-direction: column; /* Align items in a column */
     flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
     margin: 0 auto 4em; /* Center the resume section */
-    padding: auto; /* Add padding for spacing */
+    padding: 0; /* Remove default padding */
     width: 80dvw; /* Set a fixed width for the resume section */
     max-width: 800px; /* Set a maximum width for larger screens */
+    box-shadow: 2px 3px 9px #eee5ff; /* Shadow effect */
 }
 .pdf-iframe {
     width: 100%; /* Make the iframe take up the full width of its container */
+    max-width: 800px; /* Set a maximum width for larger screens */
     height: 600px; /* Set a fixed height for the iframe */
     border: none; /* Remove default border */
-    max-width: 800px; /* Set a maximum width for larger screens */
     display: block; /* Make the iframe a block element */
-    margin-left: auto; /* Center the iframe horizontally */
-    margin-right: auto; /* Center the iframe horizontally */
-    border: 1px solid #f2eefa; /* Add a light border for better visibility */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 2px 3px 9px #eee5ff; /* Shadow effect */
-@media (max-width: 600px) {
+}
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 600px) {
+    .pdf-iframe {
+        width: 100%; /* Make the iframe take up the full width of its container */
+        max-width: 800px; /* Set a maximum width for larger screens */
         height: 400px; /* Reduce height for smaller screens */
+        border: none; /* Remove default border */
+        display: block; /* Make the iframe a block element */
     }
 }
+
 
 /* Photos Section */
 .photos {
