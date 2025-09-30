@@ -119,7 +119,7 @@ main {
 }
 .pdf-iframe {
     width: 100%; /* Make the iframe take up the full width of its container */
-    height: 100dvh; /* Set height to 100% of the viewport height */
+    height: 600px; /* Set a fixed height for the iframe */
     border: none; /* Remove default border */
     max-width: 800px; /* Set a maximum width for larger screens */
     display: block; /* Make the iframe a block element */
