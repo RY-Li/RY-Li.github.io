@@ -8,14 +8,12 @@ html, body {
     line-height: 1.75; /* Set line height for better readability */
     background-color: white; /* Light grey background for the body */
     color: #333; /* Dark grey text color */
-    height: 100%; /* Ensure the body takes up the full height of the viewport */
 }
 
 /* General Page Styling */
 body {
     display: flex;
     flex-direction: column; /* Use flexbox to structure the layout */
-    height: 100dvh; /* Ensure the page takes up the full viewport height */
 }
 
 h1, h2, h3 {
@@ -24,10 +22,19 @@ h1, h2, h3 {
 
 /* Header Styles */
 header {
+    position: sticky; /* Sticky positioning */
+    top: 0; /* Align to the top */
+    width: 100dvw; /* Set width to 100% of the viewport */
     text-align: center;
-    padding: 0.1em;
     background-color: #57068c; /* NYU Violet background */
     color: white;
+    z-index: 100; /* Ensures it stays on top of other content */
+}
+.header-text {
+    font-size: 1.5em; /* Larger font size for the header */
+    font-weight: bold; /* Bold weight for the header */
+    margin: 0; /* Remove default margin */
+    padding: 0.1em 0; /* Add padding for better spacing */
 }
 
 main {
@@ -96,6 +103,63 @@ main {
 }
 
 
+
+/* Resume Section */
+.resume {
+    display: flex;
+    text-align: center; /* Center the resume section */
+    justify-content: center; /* Center the resume links */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Align items in a column */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    margin: 0 auto 4em; /* Center the resume section */
+    padding: auto; /* Add padding for spacing */
+    width: 80dvw; /* Set a fixed width for the resume section */
+    max-width: 800px; /* Set a maximum width for larger screens */
+}
+.pdf-iframe {
+    width: 100%; /* Make the iframe take up the full width of its container */
+    height: 600px; /* Set a fixed height for the iframe */
+    border: none; /* Remove default border */
+    max-width: 800px; /* Set a maximum width for larger screens */
+    display: block; /* Make the iframe a block element */
+    margin-left: auto; /* Center the iframe horizontally */
+    margin-right: auto; /* Center the iframe horizontally */
+    border: 1px solid #f2eefa; /* Add a light border for better visibility */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 2px 3px 9px #eee5ff; /* Shadow effect */
+@media (max-width: 600px) {
+        height: 400px; /* Reduce height for smaller screens */
+    }
+}
+
+/* Photos Section */
+.photos {
+    display: flex;
+    justify-content: center; /* Center the photo section */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Align items in a column */
+    margin: 0 auto 4em; /* Center the photo section */
+    width: 80dvw; /* Set a fixed width for the photo section */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 800px; /* Set a maximum width for larger screens */
+    box-shadow: 2px 3px 9px #eee5ff; /* Shadow effect */
+}
+.photos-row {
+    display: flex;
+    justify-content: center; /* Center the photo row */
+    align-items: center; /* Center vertically */
+    flex-direction: row; /* Align items in a row */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    width: 100%; /* Make the row take up the full width of its container */
+}
+.photos-row:after {
+    content: ""; /* Clearfix */
+    display: table;
+    clear: both;
+}
+
+
 /* Contact Section */
 .contact {
     display: flex;
@@ -105,7 +169,7 @@ main {
     flex-direction: column; /* Align items in a column */
     flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
     background-color: #f2eefa; /* Light purple background */
-    margin: 4em auto; /* Center the contact section */
+    margin: 4em auto 2.5em; /* Center the contact section */
     padding: 1em; /* Add padding for spacing */
     width: 80dvw; /* Set a fixed width for the contact section */
     max-width: 800px; /* Set a maximum width for larger screens */
@@ -119,7 +183,7 @@ main {
 .hypercube-img {
     width: 150px; /* Set a fixed width for the image */
     height: auto; /* Maintain aspect ratio */
-    margin: 0 auto; /* Center the image */
+    margin: 0 auto 1em; /* Center the image */
     display: block; /* Make the image a block element */
 }
 .contact-links {
@@ -174,7 +238,7 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100%;
+    width: 100dvw;
     text-align: center;
     padding: 0.1em;
     font-size: 0.9em;
