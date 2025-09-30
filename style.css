@@ -113,27 +113,17 @@ main {
     flex-direction: column; /* Align items in a column */
     flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
     margin: 0 auto 4em; /* Center the resume section */
-    padding: 0; /* Remove default padding */
+    padding: auto; /* Add padding for spacing */
     width: 80dvw; /* Set a fixed width for the resume section */
     max-width: 800px; /* Set a maximum width for larger screens */
     box-shadow: 2px 3px 9px #eee5ff; /* Shadow effect */
 }
-.pdf-iframe {
+.resume iframe {
     width: 100%; /* Make the iframe take up the full width of its container */
-    max-width: 800px; /* Set a maximum width for larger screens */
-    height: 600px; /* Set a fixed height for the iframe */
+    max-width: 100%; /* Ensure the iframe does not exceed the container width */
+    height: 400px; /* Set a fixed height for the iframe */
     border: none; /* Remove default border */
     display: block; /* Make the iframe a block element */
-}
-/* Responsive adjustments for smaller screens */
-@media screen and (max-width: 600px) {
-    .pdf-iframe {
-        width: 100%; /* Make the iframe take up the full width of its container */
-        max-width: 800px; /* Set a maximum width for larger screens */
-        height: 400px; /* Reduce height for smaller screens */
-        border: none; /* Remove default border */
-        display: block; /* Make the iframe a block element */
-    }
 }
 
 
