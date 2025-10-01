@@ -116,12 +116,16 @@ main {
     padding: auto; /* Add padding for spacing */
     width: 80dvw; /* Set a fixed width for the resume section */
     max-width: 800px; /* Set a maximum width for larger screens */
+    height: 60dvh; /* Set a fixed height for the iframe */
+    max-height: 600px; /* Set a maximum height for the iframe */
+    border-radius: 5px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
     box-shadow: 2px 3px 9px #eee5ff; /* Shadow effect */
 }
 .resume iframe {
     width: 100%; /* Make the iframe take up the full width of its container */
     max-width: 100%; /* Ensure the iframe does not exceed the container width */
-    height: 400px; /* Set a fixed height for the iframe */
+    height: 100%; /* Make the iframe take up the full height of its container */
     border: none; /* Remove default border */
     display: block; /* Make the iframe a block element */
 }
