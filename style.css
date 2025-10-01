@@ -112,9 +112,9 @@ main {
 
 /* Resume Section */
 .img-container {
-    width: 66dvw; /* Set a fixed width for the resume section */
-    max-width: 666px; /* Set a maximum width for larger screens */
-    height: 70dvh; /* Maintain aspect ratio */
+    width: 88dvw; /* Set a fixed width for the resume section */
+    max-width: 888px; /* Set a maximum width for larger screens */
+    height: 66dvh; /* Maintain aspect ratio */
     max-height: 1000px; /* Set a maximum height for larger screens */
     justify-content: center; /* Center the resume section */
     align-items: center; /* Center vertically */
