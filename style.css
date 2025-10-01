@@ -45,10 +45,12 @@ main {
 
 /* Profile */
 .profile {
+    width: 88dvw; /* Set a fixed width for the resume section */
+    max-width: 888px; /* Set a maximum width for larger screens */
     display: flex;
     justify-content: center; /* Center the profile section */
     align-items: center; /* Center vertically */
-    margin: 1em 0; /* Add margin for spacing */
+    margin: 1em auto 1em; /* Center the profile section */
     flex-direction: row; /* Align items in a row */
     flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
 }
@@ -67,10 +69,13 @@ main {
 
 /* Bio */
 .bio {
+    width: 88dvw; /* Set a fixed width for the resume section */
+    max-width: 888px; /* Set a maximum width for larger screens */
     display: flex;
     justify-content: center; /* Center the bio section */
     align-items: center; /* Center vertically */
     text-align: left; /* Align text to the left */
+    margin: 0 auto 4em; /* Center the bio section */
     padding: 0 1.6em; /* Add padding to paragraphs for better spacing */
     flex-direction: column; /* Align items in a column */
     flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
@@ -105,25 +110,25 @@ main {
 
 
 /* Resume Section */
-.pdf-container {
-    width: 80%; /* Set a fixed width for the resume section */
-    max-width: 800px; /* Set a maximum width for larger screens */
-    position: relative; /* Essential for absolute positioning of iframe */
+.img-container {
+    width: 88dvw; /* Set a fixed width for the resume section */
+    max-width: 888px; /* Set a maximum width for larger screens */
+    height: 70dvh; /* Maintain aspect ratio */
+    max-height: 1000px; /* Set a maximum height for larger screens */
+    justify-content: center; /* Center the resume section */
     align-items: center; /* Center vertically */
     margin: 0 auto 4em; /* Center the resume section */
     border-radius: 5px; /* Rounded corners */
     box-shadow: 2px 3px 9px #eee5ff; /* Shadow effect */
-    padding-bottom: 40%; /* Maintain aspect ratio */
-    height: 0; /* Collapse container height to use padding for aspect ratio */
-    overflow: hidden; /* Hide any potential overflow */
+    overflow: auto; /* Enable scrolling if content overflows */
 }
 
-.pdf-container iframe {
-    position: absolute; /* Position iframe absolutely within the container */
-    top: 0;
-    left: 0;
-    width: 100%; /* Make iframe take full width of container */
-    height: 100%; /* Make iframe take full height of container */
+.img-container img {
+    width: 100%; /* Make the image take up the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove default inline spacing */
+    border-radius: 5px; /* Rounded corners */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
 }
 
 
@@ -134,9 +139,9 @@ main {
     align-items: center; /* Center vertically */
     flex-direction: column; /* Align items in a column */
     margin: 0 auto 4em; /* Center the photo section */
-    width: 80dvw; /* Set a fixed width for the photo section */
+    width: 88dvw; /* Set a fixed width for the photo section */
     height: auto; /* Maintain aspect ratio */
-    max-width: 800px; /* Set a maximum width for larger screens */
+    max-width: 888px; /* Set a maximum width for larger screens */
     box-shadow: 2px 3px 9px #eee5ff; /* Shadow effect */
 }
 .photos-row {
@@ -165,8 +170,8 @@ main {
     background-color: #f2eefa; /* Light purple background */
     margin: 4em auto 2.5em; /* Center the contact section */
     padding: 1em; /* Add padding for spacing */
-    width: 80dvw; /* Set a fixed width for the contact section */
-    max-width: 800px; /* Set a maximum width for larger screens */
+    width: 70dvw; /* Set a fixed width for the contact section */
+    max-width: 780px; /* Set a maximum width for larger screens */
     border-radius: 5px; /* Rounded corners */
     box-shadow: 2px 3px 9px #eee5ff; /* Shadow effect */
 }
