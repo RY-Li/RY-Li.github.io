@@ -105,29 +105,26 @@ main {
 
 
 /* Resume Section */
-.resume {
-    display: flex;
-    text-align: center; /* Center the resume section */
-    justify-content: center; /* Center the resume links */
-    align-items: center; /* Center vertically */
-    flex-direction: column; /* Align items in a column */
-    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
-    margin: 0 auto 4em; /* Center the resume section */
-    padding: auto; /* Add padding for spacing */
+.pdf-container {
     width: 80dvw; /* Set a fixed width for the resume section */
     max-width: 800px; /* Set a maximum width for larger screens */
-    height: 60dvh; /* Set a fixed height for the iframe */
-    max-height: 600px; /* Set a maximum height for the iframe */
+    position: relative; /* Essential for absolute positioning of iframe */
+    justify-content: center; /* Center the resume links */
+    align-items: center; /* Center vertically */
+    margin: 0 auto 4em; /* Center the resume section */
     border-radius: 5px; /* Rounded corners */
-    overflow: hidden; /* Hide overflow */
     box-shadow: 2px 3px 9px #eee5ff; /* Shadow effect */
+    padding-bottom: 40%; /* Maintain aspect ratio */
+    height: 0; /* Collapse container height to use padding for aspect ratio */
+    overflow: hidden; /* Hide any potential overflow */
 }
-.resume iframe {
-    width: 100%; /* Make the iframe take up the full width of its container */
-    max-width: 100%; /* Ensure the iframe does not exceed the container width */
-    height: 100%; /* Make the iframe take up the full height of its container */
-    border: none; /* Remove default border */
-    display: block; /* Make the iframe a block element */
+
+.pdf-container iframe {
+    position: absolute; /* Position iframe absolutely within the container */
+    top: 0;
+    left: 0;
+    width: 100%; /* Make iframe take full width of container */
+    height: 100%; /* Make iframe take full height of container */
 }
 
 
