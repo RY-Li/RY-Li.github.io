@@ -246,3 +246,7 @@ footer p {
     color: white; /* White text color */
     font-size: 0.9em;
 }
+
+
+
+*{outline: 0.5px solid red;}
