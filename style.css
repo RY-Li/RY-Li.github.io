@@ -24,6 +24,8 @@ h1, h2, h3 {
 header {
     position: sticky; /* Sticky positioning */
     top: 0; /* Align to the top */
+    left: 0;
+    right: 0;
     width: 100dvw; /* Set width to 100% of the viewport */
     text-align: center;
     background-color: #57068c; /* NYU Violet background */
@@ -235,6 +237,8 @@ main {
 /* Footer Styling */
 footer {
     bottom: 0; /* Align to the bottom */
+    left: 0;
+    right: 0;
     width: 100dvw;
     text-align: center;
     background-color: #57068c; /* NYU Violet background */
