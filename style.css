@@ -234,13 +234,14 @@ main {
 
 /* Footer Styling */
 footer {
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: 0; /* Align to the bottom */
     width: 100dvw;
     text-align: center;
-    padding: 0.1em;
+    background-color: #57068c; /* NYU Violet background */
+}
+.footer-text {
+    margin: 0; /* Remove default margin */
+    padding: 0.4em;
     font-size: 0.9em;
-    background-color: #57068c;
     color: white;
 }
