@@ -59,7 +59,7 @@ main {
     border-radius: 50%; /* Make the image circular */
     width: 150px; /* Set a fixed width for the image */
     height: 150px; /* Set a fixed height for the image */
-    margin: 0 1em; /* Add space between the image and text */
+    margin: 0; /* Remove default margin */
 }
 .profile-text {
     margin: 0.5em 0;
@@ -142,7 +142,6 @@ main {
     width: 88dvw; /* Set a fixed width for the photo section */
     height: auto; /* Maintain aspect ratio */
     max-width: 888px; /* Set a maximum width for larger screens */
-    box-shadow: 2px 3px 9px #eee5ff; /* Shadow effect */
 }
 .photos-row {
     display: flex;
