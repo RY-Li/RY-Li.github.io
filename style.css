@@ -106,10 +106,9 @@ main {
 
 /* Resume Section */
 .pdf-container {
-    width: 80dvw; /* Set a fixed width for the resume section */
+    width: 80%; /* Set a fixed width for the resume section */
     max-width: 800px; /* Set a maximum width for larger screens */
     position: relative; /* Essential for absolute positioning of iframe */
-    justify-content: center; /* Center the resume links */
     align-items: center; /* Center vertically */
     margin: 0 auto 4em; /* Center the resume section */
     border-radius: 5px; /* Rounded corners */
