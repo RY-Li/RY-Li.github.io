@@ -30,10 +30,12 @@ header {
     background-color: #57068c; /* NYU Violet background */
     z-index: 100; /* Ensures it stays on top of other content */
 }
-header h2 {
+header p {
     margin: 0; /* Remove default margin */
     padding: auto;
     color: white; /* White text color */
+    font-size: 1.5em; /* Slightly larger font size for the header */
+    font-weight: 600; /* Semi-bold weight for the header */
 }
 
 main {
@@ -110,8 +112,8 @@ main {
 
 /* Resume Section */
 .img-container {
-    width: 88dvw; /* Set a fixed width for the resume section */
-    max-width: 888px; /* Set a maximum width for larger screens */
+    width: 66dvw; /* Set a fixed width for the resume section */
+    max-width: 666px; /* Set a maximum width for larger screens */
     height: 70dvh; /* Maintain aspect ratio */
     max-height: 1000px; /* Set a maximum height for larger screens */
     justify-content: center; /* Center the resume section */
@@ -168,7 +170,7 @@ main {
     background-color: #f2eefa; /* Light purple background */
     margin: 4em auto 2.5em; /* Center the contact section */
     padding: 1em; /* Add padding for spacing */
-    width: 70dvw; /* Set a fixed width for the contact section */
+    width: 60dvw; /* Set a fixed width for the contact section */
     max-width: 780px; /* Set a maximum width for larger screens */
     border-radius: 5px; /* Rounded corners */
     box-shadow: 2px 3px 9px #eee5ff; /* Shadow effect */
@@ -243,5 +245,5 @@ footer p {
     margin: 0; /* Remove default margin */
     padding: auto;
     color: white; /* White text color */
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
