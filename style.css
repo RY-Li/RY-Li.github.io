@@ -178,12 +178,6 @@ main {
     margin-top: 0em; /* Remove space above the header */
     margin-bottom: 0.5em; /* Add space below the header */
 }
-.hypercube-img {
-    width: 150px; /* Set a fixed width for the image */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0 auto 1em; /* Center the image */
-    display: block; /* Make the image a block element */
-}
 .contact-links {
     display: flex;
     flex-direction: row; /* Align items in a row */
@@ -229,6 +223,44 @@ main {
     height: 18px; /* Set a fixed height for the icons */
     margin-right: 0.23em; /* Add space between the icon and text */
 }
+
+
+
+/* Contact Section Hypercube logo */
+.hypercube-container {
+    position: relative; /* Allows for absolute positioning of child elements */
+    width: 150px; /* Set a fixed width for the image */
+    height: 150px; /* Set a fixed height for the image */
+    margin: 0 2em 1em; /* Center the container */
+    padding: 0; /* Disable padding */
+    display: block; /* Ensure the container is a block element */
+}
+.hypercube-img {
+    position: absolute; /* Ensures the image is positioned relative to the container */
+    top: 50%; /* Center the image vertically */
+    left: 50%; /* Center the image horizontally */
+    transform: translate(-50%, -50%); /* Center the image */
+    width: 150px; /* Set a fixed width for the image */
+    height: auto;
+    z-index: 0; /* Ensures the image is behind the GIF */
+    display: block; /* Ensure the image is a block element */
+}
+.hypercube-gif {
+    position: absolute; /* Allows for absolute positioning of the GIF */
+    top: 20.3%; /* Center the GIF vertically */
+    left: -2.5%; /* Center the GIF horizontally */
+    transform: rotate(45deg); /* Rotate it */
+    width: 88%; /* Set width to 88% of the container */
+    height: auto; /* Set height to auto */
+    background-repeat: no-repeat; /* Prevents the GIF from repeating */
+    background-size: cover; /* Ensures the GIF covers the entire container */
+    z-index: 1; /* Brings the GIF in front of the image */
+}
+
+
+
+
+
 
 
 /* Footer Styling */
