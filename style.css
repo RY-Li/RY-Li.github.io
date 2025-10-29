@@ -46,8 +46,8 @@ main {
 
 
 /* Profile */
-.profile {
-    width: 88dvw; /* Set a fixed width for the resume section */
+.profile-container {
+    width: 88dvw; /* Set a fixed width for the profile section */
     max-width: 888px; /* Set a maximum width for larger screens */
     display: flex;
     justify-content: center; /* Center the profile section */
@@ -70,14 +70,14 @@ main {
 }
 
 /* Bio */
-.bio {
+.bio-container {
     width: 88dvw; /* Set a fixed width for the resume section */
     max-width: 888px; /* Set a maximum width for larger screens */
     display: flex;
     justify-content: center; /* Center the bio section */
     align-items: center; /* Center vertically */
     text-align: left; /* Align text to the left */
-    margin: 0 auto 2em; /* Center the bio section */
+    margin: 0 auto 3em; /* Center the bio section */
     padding: 0; /* Remove default padding */
     flex-direction: column; /* Align items in a column */
     flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
@@ -112,39 +112,38 @@ main {
 
 
 /* Resume Section */
-.img-container {
-    width: 88dvw; /* Set a fixed width for the resume section */
-    max-width: 888px; /* Set a maximum width for larger screens */
+.resume-iframe {
+    display: flex;
+    width: 80dvw; /* Set a fixed width for the resume section */
+    max-width: 7.9in; /* Set a maximum width for larger screens */
     height: 66dvh; /* Maintain aspect ratio */
     max-height: 1000px; /* Set a maximum height for larger screens */
     justify-content: center; /* Center the resume section */
     align-items: center; /* Center vertically */
     margin: 0 auto 4em; /* Center the resume section */
+    padding: 1em; /* Add padding for spacing */
+    background-color: #f2eefa; /* Light purple background */
+    border: none; /* Remove default border */
     border-radius: 5px; /* Rounded corners */
     box-shadow: 2px 3px 9px #eee5ff; /* Shadow effect */
     overflow: auto; /* Enable scrolling if content overflows */
 }
 
-.img-container img {
-    width: 100%; /* Make the image take up the full width of its container */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove default inline spacing */
-    border-radius: 5px; /* Rounded corners */
-    object-fit: cover; /* Ensure the image covers the container without distortion */
-}
-
 
 /* Photos Section */
-.photos {
+.pics-container {
     justify-content: center; /* Center the photo section */
     align-items: center; /* Center vertically */
     flex-direction: column; /* Align items in a column */
     margin: 0 auto 4em; /* Center the photo section */
     width: 88dvw; /* Set a fixed width for the photo section */
+    max-width: 8.3in; /* Set a maximum width for larger screens */
     height: auto; /* Maintain aspect ratio */
-    max-width: 888px; /* Set a maximum width for larger screens */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 2px 3px 9px #eee5ff; /* Shadow effect */
+    overflow: hidden; /* Hide overflow to maintain clean edges */
 }
-.photos-row {
+.pics-row {
     display: flex;
     justify-content: center; /* Center the photo row */
     align-items: center; /* Center vertically */
@@ -152,7 +151,7 @@ main {
     flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
     width: 100%; /* Make the row take up the full width of its container */
 }
-.photos-row:after {
+.pics-row:after {
     content: ""; /* Clearfix */
     display: table;
     clear: both;
@@ -160,7 +159,7 @@ main {
 
 
 /* Contact Section */
-.contact {
+.contact-container {
     display: flex;
     text-align: center; /* Center the contact section */
     justify-content: center; /* Center the contact links */
@@ -170,8 +169,8 @@ main {
     background-color: #f2eefa; /* Light purple background */
     margin: 4em auto 2.5em; /* Center the contact section */
     padding: 1em; /* Add padding for spacing */
-    width: 60dvw; /* Set a fixed width for the contact section */
-    max-width: 780px; /* Set a maximum width for larger screens */
+    width: 80dvw; /* Set a fixed width for the contact section */
+    max-width: 7.9in; /* Set a maximum width for larger screens */
     border-radius: 5px; /* Rounded corners */
     box-shadow: 2px 3px 9px #eee5ff; /* Shadow effect */
 }
