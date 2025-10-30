@@ -4,25 +4,47 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ruoyu Li's personal website">
     <title>Ruoyu Li</title>
     <link rel="icon" type="image/png" href="icons/favicon.png">
     <link rel="apple-touch-icon" href="icons/touch-icon.png">
     <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ruoyu Li's personal website">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=latin" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=latin">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 
 <body>
 
-    <header>
-        <p>李若愚 Ruoyu Li</p>
-    </header>
 
-    <main>
-        
+    <main id="top">
+
+        <!-- Responsive Topnav with Dropdown -->
+        <div class="topnav" id="myTopnav">
+
+            <a href="#top" style="font-size: larger; padding: 9px 25px;"><b>Ruoyu Li 李若愚</b></a>
+
+            <a href="#about">
+                <i class="fa-regular fa-user"></i> About Me</a>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <i class="fa-regular fa-file"></i>Resume
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#resume-web">Web Version</a>
+                    <a href="#resume-pdf">PDF Version</a>
+                </div>
+            </div>
+            <a href="#contact">
+                <i class="fa-regular fa-envelope"></i> Contact</a>
+            <!-- <a href="#top" class="active">
+                <i class="fa-solid fa-angles-up"></i> Back to Top</a> -->
+            <a href="javascript:void(0);" class="icon" onclick="responsiveTopnav()" style="font-size: 0.9em;">&#9776;</a>
+        </div>
+
+
         <!-- About Me section -->
-        <section>
+        <section id="about" style="scroll-margin-top: 8rem;">
 
             <h2>🙋🏻 About Me</h2>
 
@@ -89,11 +111,11 @@
         
         <!-- Resume Section -->
         <section>
-            <h2>📄 Resume</h2>
+            <h2 id="resume-pdf" style="scroll-margin-top: 6rem;">📄 Resume</h2>
             <div class="contact-links">
                 <a class="contact-link" href="docs/Resume Ruoyu Li.pdf" target="_blank">👉&nbsp;Download My Resume&nbsp;👈</a>
             </div>
-            <br>
+            <br id="resume-web" style="scroll-margin-top: 4rem;">
             <iframe src="docs/Resume Ruoyu Li.html" class="resume-iframe"></iframe>
         </section>
         <!-- Closing Resume section -->
@@ -114,7 +136,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section class="contact-container">
+        <section class="contact-container" id="contact" style="scroll-margin-top: 6rem;">
             <p class="contact-header">✨ <b><i>Let's connect!</i></b> ✨</p>
 
             <a class="hypercube-container" href="https://ry-li.github.io/HyperCube" target="_blank">
@@ -124,42 +146,35 @@
             
             <section class="contact-links">
                 <a class="contact-link" href="https://linkedin.com/in/rli/" target="_blank">
-                    <img src="icons/linkedin.png" alt="LinkedIn" class="contact-icons">
-                    LinkedIn
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
                 </a>
                 <a class="contact-link" href="http://github.com/ry-li" target="_blank">
-                    <img src="icons/github.png" alt="GitHub" class="contact-icons">
-                    GitHub
+                    <i class="fa-brands fa-github"></i> GitHub
                 </a>
             </section>
 
             <section class="contact-links">
                 <a class="contact-link" href="https://instagram.com/uyouril" target="_blank">
-                    <img src="icons/instagram.png" alt="Instagram" class="contact-icons">
-                    Instagram
+                    <i class="fa-brands fa-instagram"></i> Instagram
                 </a>
                 <a class="contact-link" href="https://unsplash.com/@r_li" target="_blank">
-                    <img src="icons/Unsplash.svg" alt="Unsplash" class="contact-icons">
-                    Unsplash
+                    <i class="fa-brands fa-unsplash"></i> Unsplash
                 </a>
                 <a class="contact-link" href="https://500px.com/p/ruoyuli" target="_blank">
-                    <img src="icons/500px.ico" alt="500px" class="contact-icons">
-                    500px
+                    <i class="fa-brands fa-500px"></i> 500px
                 </a>
                 <a class="contact-link" href="https://www.xiaohongshu.com/user/profile/5c0072e951783a170d36f58a" target="_blank">
-                    <img src="icons/RedNote.png" alt="RedNote" class="contact-icons">
+                    <img src="icons/Xiaohongshu--Streamline-Simple-Icons.svg" alt="RedNote" class="contact-icons">
                     小红书
                 </a>
             </section>
 
             <section class="contact-links">
                 <a class="contact-link" href="mailto:r.li@nyu.edu">
-                    <img src="icons/email.png" alt="Email (NYU)" class="contact-icons">
-                    Email@NYU
+                    <i class="fa-regular fa-envelope"></i> Email@NYU
                 </a>
                 <a class="contact-link" href="mailto:ruoyu.li@darksky.com">
-                    <img src="icons/email.png" alt="Email (DarkSky)" class="contact-icons">
-                    Email@DarkSky
+                    <i class="fa-regular fa-envelope"></i> Email@DarkSky
                 </a>
             </section>
         
@@ -170,6 +185,49 @@
     <footer>
         <p>&copy; 2025 Ruoyu Li</p>
     </footer>
+
+
+
+<!-- Script for Responsive Topnav with Dropdown -->
+<script>
+function responsiveTopnav() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    var topnav = document.getElementById('myTopnav');
+    if (!topnav) return;
+
+    // Close responsive nav when any anchor inside topnav (except the hamburger) is clicked
+    topnav.addEventListener('click', function (e) {
+        var el = e.target;
+        var a = el.closest('a');
+        if (!a) return;
+        // ignore the hamburger/icon link that toggles the menu
+        if (a.classList.contains('icon')) return;
+
+        if (topnav.classList.contains('responsive')) {
+            topnav.className = 'topnav';
+        }
+    });
+
+    // Also close when clicking links inside dropdown-content (if you have anchors not wrapped in <a> directly)
+    var dropdownLinks = topnav.querySelectorAll('.dropdown-content a');
+    dropdownLinks.forEach(function(link) {
+        link.addEventListener('click', function () {
+            if (topnav.classList.contains('responsive')) {
+                topnav.className = 'topnav';
+            }
+        });
+    });
+});
+</script>
+
 
 </body>
 

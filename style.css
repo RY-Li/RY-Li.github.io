@@ -21,28 +21,141 @@ h1, h2, h3 {
     text-align: center;
 }
 
-/* Header Styles */
-header {
-    position: sticky; /* Sticky positioning */
-    top: 0; /* Align to the top */
-    left: 0;
-    right: 0;
-    text-align: center;
-    background-color: #57068c; /* NYU Violet background */
-    z-index: 100; /* Ensures it stays on top of other content */
-}
-header p {
-    margin: 0; /* Remove default margin */
-    padding: auto;
-    color: white; /* White text color */
-    font-size: 1.5em; /* Slightly larger font size for the header */
-    font-weight: 600; /* Semi-bold weight for the header */
-}
-
 main {
     text-align: left; /* Align text to the left */
     flex: 1; /* Allow the main content to grow and take up available space */
 }
+
+
+
+
+
+/* ------------------------------- */
+/* Responsive Topnav with Dropdown */
+/* ------------------------------- */
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #57068c; /* NYU Violet background */
+    display:flow-root;
+    position: sticky; /* Sticky/fixed navbar */
+    width: 100%;
+    top: 0; /* At the top */
+    z-index: 99;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+    background-color: #8900e1; /* Ultra Violet color */
+    color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* Style the dropdown button to fit inside the topnav */
+.dropdown .dropbtn {
+    font-size: 0.9em;
+    line-height: 1.75; /* Set line height for better readability */
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #eee5ff; /* Light purple background */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: #57068c; /* Purple text color */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: #8900e1; /* Ultra Violet color */
+    color: white;
+}
+
+/* Add a grey background to dropdown links on hover */
+.dropdown-content a:hover {
+    color: #57068c; /* Purple text color */
+    background-color: #eeccff; /* Darker shade on hover */
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+    .topnav.responsive {position: fixed;}
+    .topnav.responsive a.icon {
+        position: fixed;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .topnav.responsive .dropdown {float: none;}
+    .topnav.responsive .dropdown-content {position: sticky;}
+    .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+
 
 
 /* Profile */
@@ -68,6 +181,8 @@ main {
     font-size: 1.1em; /* Slightly larger font size for better readability */
     text-align: left; /* Align text to the left */
 }
+
+
 
 /* Bio */
 .bio-container {
@@ -130,6 +245,7 @@ main {
 }
 
 
+
 /* Photos Section */
 .pics-container {
     justify-content: center; /* Center the photo section */
@@ -156,6 +272,7 @@ main {
     display: table;
     clear: both;
 }
+
 
 
 /* Contact Section */
@@ -190,7 +307,7 @@ main {
     text-decoration: none; /* Remove underline from links */
     justify-content: center; /* Center the contact links */
     align-items: center; /* Center vertically */
-    color: #57068c; /* Black text color */
+    color: #57068c; /* Purple text color */
     background-color: #eee5ff; /* Light purple background */
     margin: 0.5em; /* Add margin for spacing */
     padding: 0.1em 0.6em; /* Add padding for better spacing */
@@ -256,9 +373,6 @@ main {
     background-size: cover; /* Ensures the GIF covers the entire container */
     z-index: 1; /* Brings the GIF in front of the image */
 }
-
-
-
 
 
 
