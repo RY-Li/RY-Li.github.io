@@ -61,23 +61,19 @@ main {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 0.9em;
+    -webkit-tap-highlight-color: transparent; /* remove gray tap flash on iOS */
 }
-
-/* Add an active class to highlight the current page */
-/* .active {
-    background-color: #8900e1;
-    color: white;
-} */
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
     display: none;
 }
 
-/* Dropdown container - needed to position the dropdown content */
+/* Dropdown container: make it the positioning context for the submenu */
 .dropdown {
     float: left;
-    overflow: hidden;
+    position: relative; /* Positioning context for submenu */
+    overflow: visible;  /* Show submenu outside the button box */
 }
 
 /* Style the dropdown button to fit inside the topnav */
@@ -98,7 +94,7 @@ main {
     display: none;
     position: absolute;
     top: 100%; /* place directly below the dropdown button by default */
-    left: 0;
+    left: 0; /* aligns left edge with the button */
     background-color: #eee5ff; /* Light purple background */
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -116,37 +112,95 @@ main {
 }
 
 /* Add a dark background on topnav links and the dropdown button on hover */
-.topnav a:hover, .dropdown:hover .dropbtn {
-    background-color: #8900e1; /* Ultra Violet color */
-    color: white;
+/* Only apply hover color on devices that actually have hover capability (e.g. desktops) */
+@media (hover: hover) and (pointer: fine) {
+  .topnav a:hover, .dropdown:hover .dropbtn {
+      background-color: #8900e1; /* Ultra Violet color */
+      color: white;
+  }
 }
 
-/* Add a grey background to dropdown links on hover */
-.dropdown-content a:hover {
-    color: #57068c; /* Purple text color */
-    background-color: #eeccff; /* Darker shade on hover */
+/* Add a grey background to dropdown links on hover — desktop only */
+@media (hover: hover) and (pointer: fine) {
+  .dropdown-content a:hover {
+      color: #57068c; /* Purple text color */
+      background-color: #eeccff; /* Darker shade on hover */
+  }
 }
 
-/* Show the dropdown menu when the user moves the mouse over the dropdown button */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
-    .topnav a:not(:first-child), .dropdown .dropbtn {
-        display: none;
-    }
-    
-    .topnav a.icon {
-        float: right;
+/* Show the dropdown on hover (DESKTOP ONLY: real mouse/trackpad) */
+@media (hover: hover) and (pointer: fine) {
+    .topnav:not(.responsive) .dropdown:hover .dropdown-content {
         display: block;
     }
 }
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+
+/* When we toggle the dropdown via JS on small screens we add the 'open' class to the .dropdown */
+.topnav.responsive .dropdown.open .dropdown-content {
+    display: block;
+}
+
+
+
+/* === Hamburger: base (global) === */
+.topnav .icon.hamburger {          /* hidden by default (desktop) */
+    display: none;
+    padding: 14px 16px;
+}
+.topnav .icon.hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin: 5px 0;
+    background: #f2f2f2;
+    transition: transform 220ms ease, opacity 180ms ease, top 220ms ease;
+}
+
+/* Morph to X when menu expanded (state-based, not size-based) */
+.topnav.responsive .icon.hamburger span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.topnav.responsive .icon.hamburger span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-6px);
+}
+.topnav.responsive .icon.hamburger span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .topnav .icon.hamburger span { transition: none; }
+}
+
+
+
+/* -------------------------------------- */
+/*   SMALL SCREENS (≤ 600px wide)         */
+/* -------------------------------------- */
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. */
+/* This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 600px) {
-    .topnav.responsive {position: sticky;}
+    
+    /* Hide all links except the first (Home/Name) */
+    .topnav a:not(:first-child),
+    .dropdown .dropbtn {
+        display: none;
+    }
+
+    /* Show the hamburger */
+    .topnav .icon.hamburger {
+        float: right;
+        display: block;
+        padding: 14px 16px; /* maintain tappable area */
+    }
+
+    .topnav.responsive {
+        position: sticky;
+        z-index: 1000; /* Keep hamburger above content but below the dropdown links in responsive mode */
+    }
 
     .topnav.responsive a.icon {
         position: fixed;
@@ -162,11 +216,20 @@ main {
 
     .topnav.responsive .dropdown {float: none;}
 
-    /* On small screens let dropdown content flow in the document (so it doesn't float oddly on some mobile browsers) */
-    .topnav.responsive .dropdown-content {position: relative;}
+    /* Dropdown contents: full width and inline flow */
+    .topnav.responsive .dropdown-content {
+        position: relative;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        box-shadow: none; /* prevent floating shadow block look */
+        border-top: 1px solid #e5d6ff; /* subtle divider so it feels intentional */
+        z-index: 1001; /* Keep hamburger above content but below the dropdown links in responsive mode */
+    }
 
     .topnav.responsive .dropdown-content a {
-        padding-left: 28px; /* indent links so they align visually with other menu items */
+        padding-left: 28px; /* indent links for hierarchy */
     }
 
     .topnav.responsive .dropdown .dropbtn {
@@ -176,10 +239,7 @@ main {
     }
 }
 
-/* When we toggle the dropdown via JS on small screens we add the 'open' class to the .dropdown */
-.topnav.responsive .dropdown.open .dropdown-content {
-    display: block;
-}
+
 
 
 

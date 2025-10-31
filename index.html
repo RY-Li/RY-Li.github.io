@@ -37,9 +37,17 @@
             </div>
             <a href="#contact">
                 <i class="fa-regular fa-envelope"></i> Contact</a>
-            <!-- <a href="#top" class="active">
-                <i class="fa-solid fa-angles-up"></i> Back to Top</a> -->
-            <a href="javascript:void(0);" class="icon" onclick="responsiveTopnav()" style="font-size: 0.9em;">&#9776;</a>
+
+            <!-- Transform hamburger into an animated “X” with smooth motion -->
+            <a href="javascript:void(0);" 
+                class="icon hamburger" 
+                id="hamburger" 
+                aria-label="Toggle menu" 
+                aria-expanded="false" 
+                onclick="responsiveTopnav()" 
+                style="font-size: 0.9em;">
+                <span></span><span></span><span></span>
+            </a>
         </div>
 
 
