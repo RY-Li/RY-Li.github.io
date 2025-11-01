@@ -495,12 +495,12 @@ footer {
     left: 0;
     right: 0;
     text-align: center;
+    color: var(--gr-white); /* White text color */
     background-color: var(--violet); /* NYU Violet background */
 }
 footer p {
     margin: 0; /* Remove default margin */
     padding: auto;
-    color: var(--gr-white); /* White text color */
     font-size: 0.9em;
 }
 
