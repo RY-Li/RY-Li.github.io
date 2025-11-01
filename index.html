@@ -19,9 +19,9 @@
     <main id="top">
 
         <!-- Responsive Topnav with Dropdown -->
-        <div class="topnav" id="myTopnav">
+        <section class="topnav" id="myTopnav">
 
-            <a href="#top" class="name"><b>Ruoyu Li 李若愚</b></a>
+            <a href="#top" class="name">Ruoyu Li 李若愚</b></a>
 
             <a href="#about">
                 <i class="fa-regular fa-user"></i> About Me</a>
@@ -31,8 +31,8 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <a href="#resume-web">Web Version</a>
                     <a href="#resume-pdf">PDF Version</a>
+                    <a href="#resume-web">Web Version</a>
                 </div>
             </div>
             <a href="#contact">
@@ -49,28 +49,76 @@
                 style="font-size: 0.9em;">
                 <span></span><span></span><span></span>
             </a>
-        </div>
+        </section> <!-- Closing Topnav -->
+
+
+
+        <!-- Profile Section -->
+        <section class ="profile-container">
+            <img src="pics/profile.jpg" alt="Lǐ, RuòYú" class="profile-image">
+            <p class="profile-text">
+                <a class="bio-link" href="https://engineering.nyu.edu/research-innovation/centers/cusp" target="_blank" rel="noopener">
+                        <img src="icons/NYU.png" alt="NYU" class="profile-icon"></a><b> NYU Graduate Student</b>
+                <br>
+                &nbsp;&nbsp;&nbsp;<small>-&nbsp;Urban Data Science & Remote Sensing</small>
+                <br>
+                <a class="bio-link" href="https://darksky.org" target="_blank" rel="noopener">
+                        <img src="icons/DarkSky.png" alt="DarkSky" class="profile-icon"></a><b> DarkSky Delegate</b>
+                <br>
+                &nbsp;&nbsp;&nbsp;<small>-&nbsp;China & New York State</small>
+                <br>
+                <i class="fa-solid fa-camera profile-fa-icon"></i><b> Amateur Photographer</b>
+                <br>
+                <i class="fa-solid fa-paw profile-fa-icon"></i><b> Cat Parent</b>
+            </p>
+        </section> <!-- Closing Profile section -->
+
+
+
+        <!-- A Smaller Contact Section -->
+        <section class="contact-container-small">
+
+            <div class="contact-links">
+                <a class="contact-link" href="mailto:hi@r-li.com">
+                    <i class="fa-regular fa-envelope"></i><i class="fa-solid fa-at"></i><i class="fa-solid fa-user"></i>
+                </a>
+                <a class="contact-link" href="mailto:r.li@nyu.edu">
+                    <i class="fa-regular fa-envelope"></i><i class="fa-solid fa-at"></i>
+                    <img src="icons/NYU.png" alt="NYU" class="contact-icon">
+                </a>
+                <a class="contact-link" href="mailto:ruoyu.li@darksky.com">
+                    <i class="fa-regular fa-envelope"></i><i class="fa-solid fa-at"></i>
+                    <img src="icons/DarkSky.png" alt="DarkSky" class="contact-icon">
+                </a>
+                <a class="contact-link" href="https://linkedin.com/in/rli/" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-linkedin contact-fa-icon"></i>
+                </a>
+                <a class="contact-link" href="http://github.com/ry-li" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github contact-fa-icon"></i>
+                </a>
+                <a class="contact-link" href="https://instagram.com/uyouril" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-instagram contact-fa-icon"></i>
+                </a>
+                <a class="contact-link" href="https://unsplash.com/@r_li" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-unsplash contact-fa-icon"></i>
+                </a>
+                <a class="contact-link" href="https://500px.com/p/ruoyuli" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-500px contact-fa-icon"></i>
+                </a>
+                <a class="contact-link" href="https://www.xiaohongshu.com/user/profile/5c0072e951783a170d36f58a" target="_blank" rel="noopener">
+                    <img src="icons/Xiaohongshu--Streamline-Simple-Icons.png" alt="RedNote" class="contact-icon">
+                </a>
+            </div>
+
+        
+        </section> <!-- Closing Contact section -->
+
 
 
         <!-- About Me section -->
-        <section id="about" class="anchor-lg">
+        <section id="about" class="anchor">
 
-            <h2>🙋🏻 About Me</h2>
-
-            <div class ="profile-container">
-                <img src="pics/profile.jpg" alt="Lǐ, RuòYú" class="profile-image">
-                <p class="profile-text">
-                    <b>Graduate Student at NYU CUSP</b>
-                    <br>
-                    &nbsp;<small>- Urban Data Science & Remote Sensing</small>
-                    <br>
-                    <b>DarkSky Advocate</b>
-                    <br>
-                    <b>Amateur Photographer</b>
-                    <br>
-                    <b>Cat Parent</b>
-                </p>
-            </div>
+            <h2><img src="icons/agender-sparkling-heart-d.svg" alt="Agender" class="bio-header-icon"> About Me</h2>
 
             <div class ="bio-container">
                 <p>
@@ -111,24 +159,13 @@
                         <img src="icons/HBS.svg" alt="Harvard Business School Online" class="bio-icon">Harvard Business School Online</a>.
                     <br>
                     <br>
-                    In my free time, I enjoy <a class="bio-link" href="https://unsplash.com/@r_li" target="_blank" rel="noopener">photography</a>, astronomy, and spending time with my two lovely cats.
+                    In my free time, I enjoy <a class="bio-link" href="https://unsplash.com/@r_li" target="_blank" rel="noopener">photography</a>, astronomy, urban hiking, biking, and spending time with my two lovely cats.
                     I also love exploring new technologies and how they can be applied in urban environments.
                 </p>
             </div>
         </section> <!-- Closing About Me section -->
 
-        
-        <!-- Resume Section -->
-        <section>
-            <h2 id="resume-pdf" class="anchor-md">📄 Resume</h2>
-            <div class="contact-links">
-                <a class="contact-link" href="docs/Resume Ruoyu Li.pdf" target="_blank" rel="noopener">👉&nbsp;Download My Resume&nbsp;👈</a>
-            </div>
-            <br>
-            <iframe id="resume-web" src="docs/Resume Ruoyu Li.html" class="resume-iframe anchor-sm"></iframe>
-        </section>
-        <!-- Closing Resume section -->
-         
+
 
         <!-- Photo Section -->
         <section class="pics-container">
@@ -142,50 +179,68 @@
                 <img src="pics/pepper.jpg" alt="Pepper" style="width: 50%;">
                 <img src="pics/piggy.jpg" alt="Piggy" style="width: 50%;">
             </div>
+        </section> <!-- Closing Photo section -->
+        
+        
+        
+        <!-- Resume Section -->
+        <section>
+            <h2 id="resume-pdf" class="anchor"><i class="fa-regular fa-file"></i> Resume</h2>
+            <div class="contact-links">
+                <a class="contact-link" href="docs/Resume Ruoyu Li.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-pdf"></i>&nbsp;PDF&nbsp;&&nbsp;<i class="fa-regular fa-floppy-disk"></i>&nbsp;Save&nbsp;</a>
+            </div>
+            <br>
+            <iframe id="resume-web" src="docs/Resume Ruoyu Li.html" class="resume-iframe anchor"></iframe>
         </section>
+        <!-- Closing Resume section -->
+         
+
+
 
         <!-- Contact Section -->
-        <section class="contact-container anchor-md" id="contact">
+        <section class="contact-container anchor" id="contact">
             <p class="contact-header">✨ <b><i>Let's connect!</i></b> ✨</p>
 
             <a class="hypercube-container" href="https://ry-li.github.io/HyperCube" target="_blank" rel="noopener">
-                <img src="icons/HyperCube_broken.png" alt="HyperCube" class="hypercube-img">
+                <img src="icons/Li_broken.png" alt="HyperCube" class="hypercube-img">
                 <img src="icons/logo-cover.gif" alt="Logo Cover" class="hypercube-gif">
             </a>
             
-            <section class="contact-links">
+            <div class="contact-links">
                 <a class="contact-link" href="https://linkedin.com/in/rli/" target="_blank" rel="noopener">
-                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                    <i class="fa-brands fa-linkedin contact-fa-icon"></i> LinkedIn
                 </a>
                 <a class="contact-link" href="http://github.com/ry-li" target="_blank" rel="noopener">
-                    <i class="fa-brands fa-github"></i> GitHub
+                    <i class="fa-brands fa-github contact-fa-icon"></i> GitHub
                 </a>
-            </section>
+            </div>
 
-            <section class="contact-links">
+            <div class="contact-links">
                 <a class="contact-link" href="https://instagram.com/uyouril" target="_blank" rel="noopener">
-                    <i class="fa-brands fa-instagram"></i> Instagram
+                    <i class="fa-brands fa-instagram contact-fa-icon"></i> Instagram
                 </a>
                 <a class="contact-link" href="https://unsplash.com/@r_li" target="_blank" rel="noopener">
-                    <i class="fa-brands fa-unsplash"></i> Unsplash
+                    <i class="fa-brands fa-unsplash contact-fa-icon"></i> Unsplash
                 </a>
                 <a class="contact-link" href="https://500px.com/p/ruoyuli" target="_blank" rel="noopener">
-                    <i class="fa-brands fa-500px"></i> 500px
+                    <i class="fa-brands fa-500px contact-fa-icon"></i> 500px
                 </a>
                 <a class="contact-link" href="https://www.xiaohongshu.com/user/profile/5c0072e951783a170d36f58a" target="_blank" rel="noopener">
-                    <img src="icons/Xiaohongshu--Streamline-Simple-Icons.svg" alt="RedNote" class="contact-icons">
-                    小红书
+                    <img src="icons/Xiaohongshu--Streamline-Simple-Icons.png" alt="RedNote" class="contact-icon">&nbsp;rednote
                 </a>
-            </section>
+            </div>
 
-            <section class="contact-links">
+            <div class="contact-links">
+                <a class="contact-link" href="mailto:hi@r-li.com">
+                    <i class="fa-regular fa-envelope"></i> email @r-li.com
+                </a>
                 <a class="contact-link" href="mailto:r.li@nyu.edu">
-                    <i class="fa-regular fa-envelope"></i> Email@NYU
+                    <i class="fa-regular fa-envelope"></i> email @NYU.edu
                 </a>
                 <a class="contact-link" href="mailto:ruoyu.li@darksky.com">
-                    <i class="fa-regular fa-envelope"></i> Email@DarkSky
+                    <i class="fa-regular fa-envelope"></i> email @DarkSky.org
                 </a>
-            </section>
+            </div>
         
         </section> <!-- Closing Contact section -->
 

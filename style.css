@@ -80,11 +80,6 @@ main {
     padding: 9px 25px;
 }
 
-/* Anchor scroll spacing */
-.anchor-lg { scroll-margin-top: 8rem; }  /* e.g., #about */
-.anchor-md { scroll-margin-top: 6rem; }  /* e.g., #resume-pdf #contact */
-.anchor-sm { scroll-margin-top: 5rem; }  /* e.g., #resume-web iframe */
-
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
     display: none;
@@ -136,6 +131,11 @@ main {
     display: block;
     text-align: left;
 }
+
+
+/* Anchor scroll spacing */
+.anchor { scroll-margin-top: 5rem; }
+
 
 /* Add a dark background on topnav links and the dropdown button on hover */
 /* Only apply hover color on devices that actually have hover capability (e.g. desktops) */
@@ -276,14 +276,14 @@ main {
     display: flex;
     justify-content: center; /* Center the profile section */
     align-items: center; /* Center vertically */
-    margin: 1em auto 1em; /* Center the profile section */
+    margin: 2em auto 0; /* Center the profile section */
     flex-direction: row; /* Align items in a row */
     flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
 }
 .profile-image {
     border-radius: 50%; /* Make the image circular */
-    width: 150px; /* Set a fixed width for the image */
-    height: 150px; /* Set a fixed height for the image */
+    width: 180px; /* Set a fixed width for the image */
+    height: 180px; /* Set a fixed height for the image */
     margin: 0; /* Remove default margin */
 }
 .profile-text {
@@ -292,10 +292,87 @@ main {
     font-size: 1.1em; /* Slightly larger font size for better readability */
     text-align: left; /* Align text to the left */
 }
+.profile-icon {
+    height: 21px; /* Set a fixed height for the icons */
+    margin-right: 0.1em; /* Add space between the icon and text */
+    margin-bottom: -0.2em; /* Adjust bottom margin for better alignment */
+}
+.profile-fa-icon {
+    color: var(--violet); /* NYU Violet for icons */
+}
+
+
+
+
+/* Small Contact Section */
+.contact-container-small {
+    display: flex;
+    text-align: center; /* Center the contact section */
+    justify-content: center; /* Center the contact links */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Align items in a column */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    background-color: var(--gr-white); /* Light purple background */
+    font-size: 0.9em; /* Slightly smaller font size */
+    margin: 0 auto 4em; /* Center the contact section */
+    padding: 0; /* Remove default padding */
+    width: 80dvw; /* Set a fixed width for the contact section */
+    max-width: 888px; /* Set a maximum width for larger screens */
+}
+.contact-links {
+    display: flex;
+    flex-direction: row; /* Align items in a row */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    justify-content: center; /* Center the contact links */
+}
+.contact-link {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    text-decoration: none; /* Remove underline from links */
+    justify-content: center; /* Center the contact links */
+    align-items: center; /* Center vertically */
+    color: var(--violet); /* Purple text color */
+    background-color: var(--bg-soft-2); /* Light purple background */
+    margin: 0.5em; /* Add margin for spacing */
+    padding: 0.4em 0.4em; /* Add padding for better spacing */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color .2s ease, box-shadow .2s ease, transform .2s ease; /* Smooth transition for hover effect */
+}
+.contact-link:hover {
+    background-color: var(--bg-soft-3); /* Darker shade on hover */
+    box-shadow: 0 0 5px var(--bg-soft-4); /* Shadow effect on hover */
+    transform: translateY(-2px); /* Slightly move up on hover */
+}
+.contact-link:active {
+    background-color: var(--bg-soft-3); /* Darker shade on click */
+    box-shadow: 0 0 5px var(--bg-soft-4); /* Shadow effect on click */
+    transform: translateY(1px); /* Slightly move down on click */
+}
+.contact-link:focus {
+    background-color: var(--bg-soft-2); /* Light purple background on focus */
+    box-shadow: 0 0 5px var(--bg-soft-4);
+    transform: translateY(1px); /* Slightly move down on focus */
+}
+/* Accessibility: keep focus for keyboard, not mouse/touch */
+.contact-link:focus-visible {
+    outline: 2px solid var(--uviolet);
+    outline-offset: 2px;
+}
+.contact-icon {
+    height: 16px; /* Set a fixed height for the icons */
+}
+.contact-fa-icon {
+    color: var(--violet); /* NYU Violet for icons */
+}
 
 
 
 /* Bio */
+.bio-header-icon {
+    height: 28px; /* Set a fixed height for the icons */
+    margin-bottom: -0.15em; /* Adjust bottom margin for better alignment */
+}
+
 .bio-container {
     width: 88dvw; /* Set a fixed width for the resume section */
     max-width: 888px; /* Set a maximum width for larger screens */
@@ -337,26 +414,6 @@ main {
 
 
 
-/* Resume Section */
-.resume-iframe {
-    display: flex;
-    width: 80dvw; /* Set a fixed width for the resume section */
-    max-width: 7.9in; /* Set a maximum width for larger screens */
-    height: 66dvh; /* Maintain aspect ratio */
-    max-height: 1000px; /* Set a maximum height for larger screens */
-    justify-content: center; /* Center the resume section */
-    align-items: center; /* Center vertically */
-    margin: 0 auto 4em; /* Center the resume section */
-    padding: 1em; /* Add padding for spacing */
-    background-color: var(--bg-soft); /* Light purple background */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 2px 3px 9px var(--bg-soft-2); /* Shadow effect */
-    overflow: auto; /* Enable scrolling if content overflows */
-}
-
-
-
 /* Photos Section */
 .pics-container {
     justify-content: center; /* Center the photo section */
@@ -386,7 +443,28 @@ main {
 
 
 
-/* Contact Section */
+/* Resume Section */
+.resume-iframe {
+    display: flex;
+    width: 80dvw; /* Set a fixed width for the resume section */
+    max-width: 7.9in; /* Set a maximum width for larger screens */
+    height: 66dvh; /* Maintain aspect ratio */
+    max-height: 1000px; /* Set a maximum height for larger screens */
+    justify-content: center; /* Center the resume section */
+    align-items: center; /* Center vertically */
+    margin: 0 auto 4em; /* Center the resume section */
+    padding: 1em; /* Add padding for spacing */
+    background-color: var(--bg-soft); /* Light purple background */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 2px 3px 9px var(--bg-soft-2); /* Shadow effect */
+    overflow: auto; /* Enable scrolling if content overflows */
+}
+
+
+
+
+/* Full Contact Section */
 .contact-container {
     display: flex;
     text-align: center; /* Center the contact section */
@@ -395,7 +473,7 @@ main {
     flex-direction: column; /* Align items in a column */
     flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
     background-color: var(--bg-soft); /* Light purple background */
-    margin: 4em auto 2.5em; /* Center the contact section */
+    margin: 2em auto 2.5em; /* Center the contact section */
     padding: 1em; /* Add padding for spacing */
     width: 80dvw; /* Set a fixed width for the contact section */
     max-width: 7.9in; /* Set a maximum width for larger screens */
@@ -405,52 +483,6 @@ main {
 .contact-header {
     margin-top: 0em; /* Remove space above the header */
     margin-bottom: 0.5em; /* Add space below the header */
-}
-.contact-links {
-    display: flex;
-    flex-direction: row; /* Align items in a row */
-    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
-    justify-content: center; /* Center the contact links */
-}
-.contact-link {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
-    text-decoration: none; /* Remove underline from links */
-    justify-content: center; /* Center the contact links */
-    align-items: center; /* Center vertically */
-    color: var(--violet); /* Purple text color */
-    background-color: var(--bg-soft-2); /* Light purple background */
-    margin: 0.5em; /* Add margin for spacing */
-    padding: 0.1em 0.6em; /* Add padding for better spacing */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color .2s ease, box-shadow .2s ease, transform .2s ease; /* Smooth transition for hover effect */
-}
-.contact-link:hover {
-    background-color: var(--bg-soft-3); /* Darker shade on hover */
-    box-shadow: 0 0 5px var(--bg-soft-4); /* Shadow effect on hover */
-    transform: translateY(-2px); /* Slightly move up on hover */
-}
-.contact-link:active {
-    background-color: var(--bg-soft-3); /* Darker shade on click */
-    box-shadow: 0 0 5px var(--bg-soft-4); /* Shadow effect on click */
-    transform: translateY(1px); /* Slightly move down on click */
-}
-.contact-link:focus {
-    background-color: var(--bg-soft-2); /* Light purple background on focus */
-    box-shadow: 0 0 5px var(--bg-soft-4);
-    transform: translateY(1px); /* Slightly move down on focus */
-}
-/* Accessibility: keep focus for keyboard, not mouse/touch */
-.contact-link:focus-visible {
-        outline: 2px solid var(--uviolet);
-        outline-offset: 2px;
-}
-.contact-link:visited {
-    color: #300051; /* Change color for visited links */
-}
-.contact-icons {
-    height: 18px; /* Set a fixed height for the icons */
-    margin-right: 0.23em; /* Add space between the icon and text */
 }
 
 
@@ -476,8 +508,8 @@ main {
 }
 .hypercube-gif {
     position: absolute; /* Allows for absolute positioning of the GIF */
-    top: 20.3%; /* Center the GIF vertically */
-    left: -2.5%; /* Center the GIF horizontally */
+    top: 21%; /* Center the GIF vertically */
+    left: -4%; /* Center the GIF horizontally */
     transform: rotate(45deg); /* Rotate it */
     width: 88%; /* Set width to 88% of the container */
     height: auto; /* Set height to auto */
