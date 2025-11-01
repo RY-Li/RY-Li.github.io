@@ -21,7 +21,7 @@
         <!-- Responsive Topnav with Dropdown -->
         <div class="topnav" id="myTopnav">
 
-            <a href="#top" style="font-size: larger; padding: 9px 25px;"><b>Ruoyu Li 李若愚</b></a>
+            <a href="#top" class="name"><b>Ruoyu Li 李若愚</b></a>
 
             <a href="#about">
                 <i class="fa-regular fa-user"></i> About Me</a>
@@ -42,9 +42,10 @@
             <a href="javascript:void(0);" 
                 class="icon hamburger" 
                 id="hamburger" 
+                role="button" 
+                aria-controls="myTopnav" 
                 aria-label="Toggle menu" 
                 aria-expanded="false" 
-                onclick="responsiveTopnav()" 
                 style="font-size: 0.9em;">
                 <span></span><span></span><span></span>
             </a>
@@ -52,7 +53,7 @@
 
 
         <!-- About Me section -->
-        <section id="about" style="scroll-margin-top: 8rem;">
+        <section id="about" class="anchor-lg">
 
             <h2>🙋🏻 About Me</h2>
 
@@ -74,43 +75,43 @@
             <div class ="bio-container">
                 <p>
                     Hi! I am Ruoyu Li (李若愚 Lǐ, RuòYú), an advocate for the
-                    <a class="bio-link" href="https://darksky.org/who-we-are" target="_blank">dark sky movement</a> and 
-                    <a class="bio-link" href="https://darksky.org/what-we-do/advancing-responsible-outdoor-lighting" target="_blank">responsible outdoor lighting</a>.
+                    <a class="bio-link" href="https://darksky.org/who-we-are" target="_blank" rel="noopener">dark sky movement</a> and 
+                    <a class="bio-link" href="https://darksky.org/what-we-do/advancing-responsible-outdoor-lighting" target="_blank" rel="noopener">responsible outdoor lighting</a>.
                     I have experience working with startups and NGOs, and am currently a graduate student in urban data science at
-                    <a class="bio-link" href="https://engineering.nyu.edu/research-innovation/centers/cusp" target="_blank">
+                    <a class="bio-link" href="https://engineering.nyu.edu/research-innovation/centers/cusp" target="_blank" rel="noopener">
                         <img src="icons/NYU.png" alt="NYU" class="bio-icon">NYU CUSP</a> (Center for Urban Science + Progress).
                     I serve as an Engagement Volunteer at
-                    <a class="bio-link" href="https://darksky.org" target="_blank">
+                    <a class="bio-link" href="https://darksky.org" target="_blank" rel="noopener">
                         <img src="icons/DarkSky.png" alt="DarkSky" class="bio-icon">DarkSky International</a>, lead the DarkSky
-                    <a class="bio-link" href="https://darkskyny.org" target="_blank">New York chapter</a> and the
-                    <a class="bio-link" href="https://darksky.cn" target="_blank">Beijing chapter</a>, and co-founded the Shenzhen chapter. I'm also the founding treasurer of the
-                    <a class="bio-link" href="https://community.asprs.org/chapter-nyu" target="_blank"> NYU student chapter</a> of
-                    <a class="bio-link" href="https://www.asprs.org" target="_blank">
+                    <a class="bio-link" href="https://darkskyny.org" target="_blank" rel="noopener">New York chapter</a> and the
+                    <a class="bio-link" href="https://darksky.cn" target="_blank" rel="noopener">Beijing chapter</a>, and co-founded the Shenzhen chapter. I'm also the founding treasurer of the
+                    <a class="bio-link" href="https://community.asprs.org/chapter-nyu" target="_blank" rel="noopener"> NYU student chapter</a> of
+                    <a class="bio-link" href="https://www.asprs.org" target="_blank" rel="noopener">
                         <img src="icons/ASPRS.png" alt="ASPRS" class="bio-icon">ASPRS</a> (American Society for Photogrammetry and Remote Sensing), and a member of the Student Committee and the Open Tech Committee at
-                    <a class="bio-link" href="https://gismonyc.org" target="_blank">
+                    <a class="bio-link" href="https://gismonyc.org" target="_blank" rel="noopener">
                         <img src="icons/GISMO.png" alt="GISMO" class="bio-icon">GISMO</a> (NYC GeoSpatial Information Systems and Mapping Organization).
                     I am passionate about using data to drive urban sustainability and enhance community engagement.
                     <br>
                     <br>
                     I graduated from the
-                    <a class="bio-link" href="https://arizona.edu" target="_blank">
+                    <a class="bio-link" href="https://arizona.edu" target="_blank" rel="noopener">
                         <img src="icons/UA.svg" alt="University of Arizona" class="bio-icon">University of Arizona</a> with a B.S. in
-                    <a class="bio-link" href="https://math.arizona.edu" target="_blank">Mathematics</a>, and a B.S. in
-                    <a class="bio-link" href="https://infosci.arizona.edu" target="_blank">Information Science</a>, with minors in
-                    <a class="bio-link" href="https://math.arizona.edu" target="_blank">Statistics and Data Science</a>, 
-                    <a class="bio-link" href="https://cs.arizona.edu" target="_blank">Computer Science</a>, and
-                    <a class="bio-link" href="https://eller.arizona.edu/departments-research/schools-departments/finance" target="_blank">Finance</a>, along with a certificate in 
-                    <a class="bio-link" href="https://eller.arizona.edu/departments-research/centers-labs/entrepreneurship/focus/new-venture-development" target="_blank">Entrepreneurship and New Venture Development</a>. 
+                    <a class="bio-link" href="https://math.arizona.edu" target="_blank" rel="noopener">Mathematics</a>, and a B.S. in
+                    <a class="bio-link" href="https://infosci.arizona.edu" target="_blank" rel="noopener">Information Science</a>, with minors in
+                    <a class="bio-link" href="https://math.arizona.edu" target="_blank" rel="noopener">Statistics and Data Science</a>, 
+                    <a class="bio-link" href="https://cs.arizona.edu" target="_blank" rel="noopener">Computer Science</a>, and
+                    <a class="bio-link" href="https://eller.arizona.edu/departments-research/schools-departments/finance" target="_blank" rel="noopener">Finance</a>, along with a certificate in 
+                    <a class="bio-link" href="https://eller.arizona.edu/departments-research/centers-labs/entrepreneurship/focus/new-venture-development" target="_blank" rel="noopener">Entrepreneurship and New Venture Development</a>. 
                     I also earned a
-                    <a class="bio-link" href="https://sps.columbia.edu/academics/certificates" target="_blank"> Graduate Certificate in Advanced Business</a> from
-                    <a class="bio-link" href="https://columbia.edu/" target="_blank">
+                    <a class="bio-link" href="https://sps.columbia.edu/academics/certificates" target="_blank" rel="noopener"> Graduate Certificate in Advanced Business</a> from
+                    <a class="bio-link" href="https://columbia.edu/" target="_blank" rel="noopener">
                         <img src="icons/Columbia.png" alt="Columbia University" class="bio-icon">Columbia University</a>
-                    and the <a class="bio-link" href="https://online.hbs.edu/courses/core/" target="_blank">Credential of Readiness (CORe)</a> from
-                    <a class="bio-link" href="https://online.hbs.edu/" target="_blank">
+                    and the <a class="bio-link" href="https://online.hbs.edu/courses/core/" target="_blank" rel="noopener">Credential of Readiness (CORe)</a> from
+                    <a class="bio-link" href="https://online.hbs.edu/" target="_blank" rel="noopener">
                         <img src="icons/HBS.svg" alt="Harvard Business School Online" class="bio-icon">Harvard Business School Online</a>.
                     <br>
                     <br>
-                    In my free time, I enjoy <a class="bio-link" href="https://unsplash.com/@r_li" target="_blank">photography</a>, astronomy, and spending time with my two lovely cats.
+                    In my free time, I enjoy <a class="bio-link" href="https://unsplash.com/@r_li" target="_blank" rel="noopener">photography</a>, astronomy, and spending time with my two lovely cats.
                     I also love exploring new technologies and how they can be applied in urban environments.
                 </p>
             </div>
@@ -119,12 +120,12 @@
         
         <!-- Resume Section -->
         <section>
-            <h2 id="resume-pdf" style="scroll-margin-top: 6rem;">📄 Resume</h2>
+            <h2 id="resume-pdf" class="anchor-md">📄 Resume</h2>
             <div class="contact-links">
-                <a class="contact-link" href="docs/Resume Ruoyu Li.pdf" target="_blank">👉&nbsp;Download My Resume&nbsp;👈</a>
+                <a class="contact-link" href="docs/Resume Ruoyu Li.pdf" target="_blank" rel="noopener">👉&nbsp;Download My Resume&nbsp;👈</a>
             </div>
             <br>
-            <iframe id="resume-web" src="docs/Resume Ruoyu Li.html" class="resume-iframe" style="scroll-margin-top: 5rem;"></iframe>
+            <iframe id="resume-web" src="docs/Resume Ruoyu Li.html" class="resume-iframe anchor-sm"></iframe>
         </section>
         <!-- Closing Resume section -->
          
@@ -144,34 +145,34 @@
         </section>
 
         <!-- Contact Section -->
-        <section class="contact-container" id="contact" style="scroll-margin-top: 6rem;">
+        <section class="contact-container anchor-md" id="contact">
             <p class="contact-header">✨ <b><i>Let's connect!</i></b> ✨</p>
 
-            <a class="hypercube-container" href="https://ry-li.github.io/HyperCube" target="_blank">
+            <a class="hypercube-container" href="https://ry-li.github.io/HyperCube" target="_blank" rel="noopener">
                 <img src="icons/HyperCube_broken.png" alt="HyperCube" class="hypercube-img">
                 <img src="icons/logo-cover.gif" alt="Logo Cover" class="hypercube-gif">
             </a>
             
             <section class="contact-links">
-                <a class="contact-link" href="https://linkedin.com/in/rli/" target="_blank">
+                <a class="contact-link" href="https://linkedin.com/in/rli/" target="_blank" rel="noopener">
                     <i class="fa-brands fa-linkedin"></i> LinkedIn
                 </a>
-                <a class="contact-link" href="http://github.com/ry-li" target="_blank">
+                <a class="contact-link" href="http://github.com/ry-li" target="_blank" rel="noopener">
                     <i class="fa-brands fa-github"></i> GitHub
                 </a>
             </section>
 
             <section class="contact-links">
-                <a class="contact-link" href="https://instagram.com/uyouril" target="_blank">
+                <a class="contact-link" href="https://instagram.com/uyouril" target="_blank" rel="noopener">
                     <i class="fa-brands fa-instagram"></i> Instagram
                 </a>
-                <a class="contact-link" href="https://unsplash.com/@r_li" target="_blank">
+                <a class="contact-link" href="https://unsplash.com/@r_li" target="_blank" rel="noopener">
                     <i class="fa-brands fa-unsplash"></i> Unsplash
                 </a>
-                <a class="contact-link" href="https://500px.com/p/ruoyuli" target="_blank">
+                <a class="contact-link" href="https://500px.com/p/ruoyuli" target="_blank" rel="noopener">
                     <i class="fa-brands fa-500px"></i> 500px
                 </a>
-                <a class="contact-link" href="https://www.xiaohongshu.com/user/profile/5c0072e951783a170d36f58a" target="_blank">
+                <a class="contact-link" href="https://www.xiaohongshu.com/user/profile/5c0072e951783a170d36f58a" target="_blank" rel="noopener">
                     <img src="icons/Xiaohongshu--Streamline-Simple-Icons.svg" alt="RedNote" class="contact-icons">
                     小红书
                 </a>

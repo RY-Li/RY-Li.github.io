@@ -1,9 +1,18 @@
 
 
 /* Color Notes */
-/* Ultra Violet color #8900e1 */
 /* NYU Violet color #57068c */
-
+/* Ultra Violet color #8900e1 */
+:root{
+    --gr-white: #f2f2f2; /* light grey */
+    --bg-soft: #f2eefa;
+    --bg-soft-2: #eee5ff;
+    --bg-soft-3: #eeccff;
+    --bg-soft-4: #8e44ad; /* alternative purple */
+    --uviolet: #8900e1;
+    --violet: #57068c;
+    --ink: #333; /* dark grey */
+}
 
 
 html, body {
@@ -14,8 +23,8 @@ html, body {
     font-size: 18px; /* Set base font size */
     font-weight: 400; /* Normal weight for body text */
     line-height: 1.75; /* Set line height for better readability */
-    background-color: white; /* Light grey background for the body */
-    color: #333; /* Dark grey text color */
+    background-color: var(--gr-white); /* Light grey background for the body */
+    color: var(--ink); /* Dark grey text color */
     min-height: 100vh; /* Ensure the body takes up the full height of the viewport */
 }
 
@@ -44,11 +53,12 @@ main {
 
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #57068c; /* NYU Violet background */
+    background-color: var(--violet); /* NYU Violet background */
     display:flow-root;
     position: sticky; /* Sticky/fixed navbar */
     width: auto;
     top: 0; /* At the top */
+    overflow: visible; /* Ensure dropdowns are visible */
     z-index: 99;
 }
 
@@ -56,13 +66,24 @@ main {
 .topnav a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: var(--gr-white);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 0.9em;
     -webkit-tap-highlight-color: transparent; /* remove gray tap flash on iOS */
 }
+
+/* Name link */
+.topnav a.name {
+    font-size: larger;
+    padding: 9px 25px;
+}
+
+/* Anchor scroll spacing */
+.anchor-lg { scroll-margin-top: 8rem; }  /* e.g., #about */
+.anchor-md { scroll-margin-top: 6rem; }  /* e.g., #resume-pdf #contact */
+.anchor-sm { scroll-margin-top: 5rem; }  /* e.g., #resume-web iframe */
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
@@ -81,12 +102,17 @@ main {
     font-size: 0.9em;
     line-height: 1.75; /* Set line height for better readability */
     border: none;
-    outline: none;
-    color: white;
+    color: var(--gr-white);
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
+}
+
+/* Accessibility: keep focus for keyboard, not mouse/touch */
+.dropdown .dropbtn:focus-visible {
+    outline: 2px solid var(--uviolet);
+    outline-offset: 2px;
 }
 
 /* Style the dropdown content (hidden by default) */
@@ -95,16 +121,16 @@ main {
     position: absolute;
     top: 100%; /* place directly below the dropdown button by default */
     left: 0; /* aligns left edge with the button */
-    background-color: #eee5ff; /* Light purple background */
+    background-color: var(--bg-soft-2); /* Light purple background */
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px var(--bg-soft-4); /* Shadow effect */
     z-index: 1;
 }
 
 /* Style the links inside the dropdown */
 .dropdown-content a {
     float: none;
-    color: #57068c; /* Purple text color */
+    color: var(--violet); /* Purple text color */
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -114,18 +140,18 @@ main {
 /* Add a dark background on topnav links and the dropdown button on hover */
 /* Only apply hover color on devices that actually have hover capability (e.g. desktops) */
 @media (hover: hover) and (pointer: fine) {
-  .topnav a:hover, .dropdown:hover .dropbtn {
-      background-color: #8900e1; /* Ultra Violet color */
-      color: white;
-  }
+        .topnav a:hover, .dropdown:hover .dropbtn {
+                background-color: var(--uviolet); /* Ultra Violet color */
+                color: var(--gr-white);
+        }
 }
 
 /* Add a grey background to dropdown links on hover — desktop only */
 @media (hover: hover) and (pointer: fine) {
-  .dropdown-content a:hover {
-      color: #57068c; /* Purple text color */
-      background-color: #eeccff; /* Darker shade on hover */
-  }
+        .dropdown-content a:hover {
+                color: var(--violet); /* Purple text color */
+                background-color: var(--bg-soft-3); /* Darker shade on hover */
+        }
 }
 
 
@@ -154,7 +180,7 @@ main {
     width: 22px;
     height: 2px;
     margin: 5px 0;
-    background: #f2f2f2;
+    background: var(--gr-white);
     transition: transform 220ms ease, opacity 180ms ease, top 220ms ease;
 }
 
@@ -224,7 +250,8 @@ main {
         right: 0;
         top: 0;
         box-shadow: none; /* prevent floating shadow block look */
-        border-top: 1px solid #e5d6ff; /* subtle divider so it feels intentional */
+        border-top: 3px solid var(--bg-soft-3); /* subtle divider so it feels intentional */
+        border-bottom: 3px solid var(--bg-soft-3); /* subtle divider so it feels intentional */
         z-index: 1001; /* Keep hamburger above content but below the dropdown links in responsive mode */
     }
 
@@ -238,9 +265,6 @@ main {
         text-align: left;
     }
 }
-
-
-
 
 
 
@@ -286,7 +310,7 @@ main {
 }
 .bio-link {
     text-decoration: none; /* Remove underline from links */
-    color: #57068c; /* NYU Violet color */
+    color: var(--violet); /* NYU Violet color */
     transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 .bio-link:hover {
@@ -324,10 +348,10 @@ main {
     align-items: center; /* Center vertically */
     margin: 0 auto 4em; /* Center the resume section */
     padding: 1em; /* Add padding for spacing */
-    background-color: #f2eefa; /* Light purple background */
+    background-color: var(--bg-soft); /* Light purple background */
     border: none; /* Remove default border */
     border-radius: 5px; /* Rounded corners */
-    box-shadow: 2px 3px 9px #eee5ff; /* Shadow effect */
+    box-shadow: 2px 3px 9px var(--bg-soft-2); /* Shadow effect */
     overflow: auto; /* Enable scrolling if content overflows */
 }
 
@@ -343,7 +367,7 @@ main {
     max-width: 8.3in; /* Set a maximum width for larger screens */
     height: auto; /* Maintain aspect ratio */
     border-radius: 5px; /* Rounded corners */
-    box-shadow: 2px 3px 9px #eee5ff; /* Shadow effect */
+    box-shadow: 2px 3px 9px var(--bg-soft-2); /* Shadow effect */
     overflow: hidden; /* Hide overflow to maintain clean edges */
 }
 .pics-row {
@@ -370,13 +394,13 @@ main {
     align-items: center; /* Center vertically */
     flex-direction: column; /* Align items in a column */
     flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
-    background-color: #f2eefa; /* Light purple background */
+    background-color: var(--bg-soft); /* Light purple background */
     margin: 4em auto 2.5em; /* Center the contact section */
     padding: 1em; /* Add padding for spacing */
     width: 80dvw; /* Set a fixed width for the contact section */
     max-width: 7.9in; /* Set a maximum width for larger screens */
     border-radius: 5px; /* Rounded corners */
-    box-shadow: 2px 3px 9px #eee5ff; /* Shadow effect */
+    box-shadow: 2px 3px 9px var(--bg-soft-2); /* Shadow effect */
 }
 .contact-header {
     margin-top: 0em; /* Remove space above the header */
@@ -394,31 +418,32 @@ main {
     text-decoration: none; /* Remove underline from links */
     justify-content: center; /* Center the contact links */
     align-items: center; /* Center vertically */
-    color: #57068c; /* Purple text color */
-    background-color: #eee5ff; /* Light purple background */
+    color: var(--violet); /* Purple text color */
+    background-color: var(--bg-soft-2); /* Light purple background */
     margin: 0.5em; /* Add margin for spacing */
     padding: 0.1em 0.6em; /* Add padding for better spacing */
     border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    transition: background-color .2s ease, box-shadow .2s ease, transform .2s ease; /* Smooth transition for hover effect */
 }
 .contact-link:hover {
-    background-color: #eeccff; /* Darker shade on hover */
-    box-shadow: 0 0 5px #8e44ad; /* Shadow effect on hover */
+    background-color: var(--bg-soft-3); /* Darker shade on hover */
+    box-shadow: 0 0 5px var(--bg-soft-4); /* Shadow effect on hover */
     transform: translateY(-2px); /* Slightly move up on hover */
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 .contact-link:active {
-    background-color: #eeccff; /* Darker shade on click */
-    box-shadow: 0 0 5px #8e44ad; /* Shadow effect on click */
+    background-color: var(--bg-soft-3); /* Darker shade on click */
+    box-shadow: 0 0 5px var(--bg-soft-4); /* Shadow effect on click */
     transform: translateY(1px); /* Slightly move down on click */
-    transition: transform 0.1s ease; /* Smooth transition for click effect */
 }
 .contact-link:focus {
-    background-color: #eee5ff; /* Light purple background on focus */
-    outline: none; /* Remove default outline */
-    box-shadow: 0 0 5px #8e44ad;
+    background-color: var(--bg-soft-2); /* Light purple background on focus */
+    box-shadow: 0 0 5px var(--bg-soft-4);
     transform: translateY(1px); /* Slightly move down on focus */
-    transition: transform 0.1s ease; /* Smooth transition for click effect */
+}
+/* Accessibility: keep focus for keyboard, not mouse/touch */
+.contact-link:focus-visible {
+        outline: 2px solid var(--uviolet);
+        outline-offset: 2px;
 }
 .contact-link:visited {
     color: #300051; /* Change color for visited links */
@@ -470,13 +495,12 @@ footer {
     left: 0;
     right: 0;
     text-align: center;
-    background-color: #57068c; /* NYU Violet background */
-    z-index: 100; /* Ensures it stays on top of other content */
+    background-color: var(--violet); /* NYU Violet background */
 }
 footer p {
     margin: 0; /* Remove default margin */
     padding: auto;
-    color: white; /* White text color */
+    color: var(--gr-white); /* White text color */
     font-size: 0.9em;
 }
 
