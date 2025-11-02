@@ -204,11 +204,11 @@ main {
 
 
 /* -------------------------------------- */
-/*   SMALL SCREENS (≤ 600px wide)         */
+/*   SMALL SCREENS (≤ 666px wide)         */
 /* -------------------------------------- */
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. */
 /* This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 666px) {
     
     /* Hide all links except the first (Home/Name) */
     .topnav a:not(:first-child),
@@ -447,7 +447,7 @@ main {
 .resume-iframe {
     display: flex;
     width: 80dvw; /* Set a fixed width for the resume section */
-    max-width: 7.9in; /* Set a maximum width for larger screens */
+    max-width: 8in; /* Set a maximum width for larger screens */
     height: 66dvh; /* Maintain aspect ratio */
     max-height: 1000px; /* Set a maximum height for larger screens */
     justify-content: center; /* Center the resume section */
@@ -476,7 +476,7 @@ main {
     margin: 2em auto 2.5em; /* Center the contact section */
     padding: 1em; /* Add padding for spacing */
     width: 80dvw; /* Set a fixed width for the contact section */
-    max-width: 7.9in; /* Set a maximum width for larger screens */
+    max-width: 8in; /* Set a maximum width for larger screens */
     border-radius: 5px; /* Rounded corners */
     box-shadow: 2px 3px 9px var(--bg-soft-2); /* Shadow effect */
 }
