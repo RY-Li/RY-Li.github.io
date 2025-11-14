@@ -385,7 +385,7 @@ main {
 
 /* Bio */
 .bio-container {
-    width: 88dvw; /* Set a fixed width for the resume section */
+    width: 88dvw; /* Set a fixed width for the bio section */
     max-width: 888px; /* Set a maximum width for larger screens */
     display: flex;
     justify-content: center; /* Center the bio section */
